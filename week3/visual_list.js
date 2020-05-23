@@ -12,15 +12,29 @@
 // element.textContent = "Hello World"
 // document.body.append(element)
 // }
-function visual(){
-    for (i = 0; i < 10; i++) {
-        var element = document.createElement ("h1"); 
-    element.textContent = "Hello World"
-    document.body.append(element)
-    }
+const names = ["Steve", "Larry", "Joe", "Shirley", "Steph", "Nate", "Rick", "Emily"]
+console.log(names)
+for (i = 0; i < Object.values(names).length; i++){
+    var heading1 = document.createElement("h1")
+    document.body.append(heading1)
+    heading1.textContent = Object.values(names)[i]
+    heading1.style.fontSize= "25 px"
+    heading1.style.color = "purple"
+    heading1.style.fontWeight= "lighter"
+    heading1.style.fontFamily= "lucidaSans"
 }
-visual()
-console.log()
+
+
+
+// function visual(){
+//     for (i = 0; i < 10; i++) {
+//         var element = document.createElement ("h1"); 
+//     element.textContent = "Hello World"
+//     document.body.append(element)
+//     }
+// }
+// visual()
+// console.log()
 
 
 
