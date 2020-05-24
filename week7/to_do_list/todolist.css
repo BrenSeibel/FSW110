@@ -15,8 +15,10 @@ ul li {
   position: relative;
   padding: 12px 8px 12px 40px;
   background: #eee;
-  font-size: 18px;
+  font-size: 22px;
   transition: 0.2s;
+  font-family: sans-serif;
+  color: purple;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -39,6 +41,10 @@ ul li:hover {
 ul li.checked {
   background: rgb(41, 189, 97);
   color: #fff;
+  text-decoration: line-through;
+}
+
+.checked {
   text-decoration: line-through;
 }
 
@@ -76,9 +82,8 @@ ul li.checked::before {
   padding: 30px 40px;
   color: white;
   text-align: center;
-  font-family: pacifico;
-  font-style: italic;
-  font-size: 75 px;
+  font-family: 'Courgette', cursive;
+  font-size: 40px;
 }
 
 /* Clear floats after the header */
@@ -90,7 +95,7 @@ ul li.checked::before {
 
 /* Style the input */
 input {
-  margin: 0;
+  margin: 5px;
   border: none;
   border-radius: 0;
   width: 75%;

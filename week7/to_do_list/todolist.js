@@ -8,6 +8,11 @@ for (i = 0; i < myNodelist.length; i++) {
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
 }
+document.getElementsByClassName("addBtn")[0]
+.addEventListener("click", ()=>{
+newElement("myInput")
+newElement("myInput2")
+})
 
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
@@ -20,17 +25,17 @@ for (i = 0; i < close.length; i++) {
 }
 
 // Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
+var list = document.getElementById('myUL');
 list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
+  if (ev.target.tagName === 'li') {
     ev.target.classList.toggle('checked');
   }
 }, false);
 
 // Create a new list item when clicking on the "Add" button
-function newElement() {
+function newElement(inputId) {
   var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
+  var inputValue = document.getElementById(inputId).value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -38,7 +43,7 @@ function newElement() {
   } else {
     document.getElementById("myUL").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+  document.getElementById(inputId).value = "";
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
