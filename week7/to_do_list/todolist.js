@@ -1,4 +1,3 @@
-// Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -14,7 +13,6 @@ newElement("myInput")
 newElement("myInput2")
 })
 
-// Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -24,15 +22,14 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-// Add a "checked" symbol when clicking on a list item
 var list = document.getElementById('myUL');
 list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'li') {
+  console.log(ev.target.tagName === 'LI')
+  if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
 }, false);
 
-// Create a new list item when clicking on the "Add" button
 function newElement(inputId) {
   var li = document.createElement("li");
   var inputValue = document.getElementById(inputId).value;
